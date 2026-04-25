@@ -35,11 +35,11 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-cover bg-[80%_center] lg:bg-center bg-no-repeat bg-blend-luminosity bg-dark-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-cover bg-[60%_top] sm:bg-[70%_center] lg:bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/backgroundimage3.jpeg')" }}
     >
       {/* Dark gradient to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/80 to-dark-950/20 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-dark-950/90 via-dark-950/60 to-dark-950/20 z-0 pointer-events-none" />
       
       {/* Subtle bottom gradient to blend into next section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-950 to-transparent z-0 pointer-events-none" />
@@ -53,9 +53,9 @@ export default function Hero() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-2 gap-16 items-center">
         {/* Left — Content */}
-        <motion.div style={{ y: yText, opacity }} variants={container} initial="hidden" animate="show" className="space-y-8">
+        <motion.div style={{ y: yText, opacity }} variants={container} initial="hidden" animate="show" className="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
           {/* Badges */}
-          <motion.div variants={item} className="flex flex-wrap gap-3">
+          <motion.div variants={item} className="flex flex-wrap justify-center lg:justify-start gap-3">
             <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-neon-yellow/10 border border-neon-yellow/25 text-neon-yellow">
               <span className="w-2 h-2 rounded-full bg-neon-yellow animate-pulse" />
               Available for Opportunities
@@ -66,7 +66,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <motion.div variants={item}>
+          <motion.div variants={item} className="flex flex-col items-center lg:items-start">
             <p className="font-mono text-neon-yellow text-sm font-semibold tracking-widest uppercase mb-3">
               Hello, I'm
             </p>
@@ -85,19 +85,19 @@ export default function Hero() {
           </motion.div>
 
           {/* Description */}
-          <motion.p variants={item} className="text-gray-400 text-base leading-relaxed max-w-lg">
+          <motion.p variants={item} className="text-gray-400 text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
             Building responsive web applications and scalable platforms. CSE undergraduate at{' '}
             <span className="text-white font-medium">Lovely Professional University</span> passionate
             about creating robust solutions with modern technologies.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={item} className="flex flex-wrap gap-4">
+          <motion.div variants={item} className="flex flex-wrap justify-center lg:justify-start gap-4 w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-7 py-3 rounded-xl bg-neon-yellow text-black font-bold text-sm hover:shadow-neon transition-shadow duration-200"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-neon-yellow text-black font-bold text-sm hover:shadow-neon transition-shadow duration-200"
             >
               View Projects
             </motion.button>
@@ -107,7 +107,7 @@ export default function Hero() {
               href="https://drive.google.com/file/d/1VAsHVQoQ4DeEX6kvO7xsyiNivWtamsRE/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-7 py-3 rounded-xl bg-dark-700 border border-neon-yellow/30 text-white font-semibold text-sm hover:border-neon-yellow hover:text-neon-yellow hover:bg-neon-yellow/5 transition-colors duration-200 block"
+              className="w-full sm:w-auto text-center px-7 py-3 rounded-xl bg-dark-700 border border-neon-yellow/30 text-white font-semibold text-sm hover:border-neon-yellow hover:text-neon-yellow hover:bg-neon-yellow/5 transition-colors duration-200 block"
             >
               Download Resume
             </motion.a>
@@ -115,7 +115,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-7 py-3 rounded-xl border border-white/15 text-gray-300 font-semibold text-sm hover:border-white/40 hover:text-white transition-colors duration-200"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl border border-white/15 text-gray-300 font-semibold text-sm hover:border-white/40 hover:text-white transition-colors duration-200"
             >
               Contact Me
             </motion.button>
