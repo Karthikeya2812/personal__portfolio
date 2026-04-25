@@ -44,7 +44,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-28 relative bg-dark-900/30">
+    <section id="contact" className="py-28 relative bg-dark-900/30 overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-20" />
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] rounded-full bg-neon-yellow/5 blur-[120px] pointer-events-none" />

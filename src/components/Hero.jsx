@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-cover bg-[60%_top] sm:bg-[70%_center] lg:bg-center bg-no-repeat"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-cover bg-[45%_top] sm:bg-[70%_center] lg:bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/backgroundimage3.jpeg')" }}
     >
       {/* Dark gradient to ensure text readability */}

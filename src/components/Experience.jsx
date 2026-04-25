@@ -91,7 +91,7 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-neon-yellow/50 via-neon-yellow/20 to-transparent" />
+          <div className="absolute left-8 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-neon-yellow/50 via-neon-yellow/20 to-transparent" />
 
           {experiences.map((exp, i) => (
             <motion.div
@@ -104,7 +104,7 @@ export default function Experience() {
               } flex-col pl-16 md:pl-0`}
             >
               {/* Dot */}
-              <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 w-5 h-5 rounded-full bg-neon-yellow shadow-neon-sm border-4 border-dark-900 z-10" />
+              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 w-5 h-5 rounded-full bg-neon-yellow shadow-neon-sm border-4 border-dark-900 z-10" />
 
               {/* Card */}
               <div className={`md:w-[calc(50%-2rem)] w-full ${i % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
