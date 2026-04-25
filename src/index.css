@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { scroll-behavior: smooth; }
+  html {
+    font-size: 18px;
+    @apply antialiased;
+  }
+  body {
+    @apply bg-dark-950 text-white font-sans tracking-wide;
+    scrollbar-width: thin;
+    scrollbar-color: #FAFF00 #111;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #111; }
+  ::-webkit-scrollbar-thumb { background: #FAFF00; border-radius: 2px; }
+}
+
+@layer utilities {
+  .neon-text {
+    color: #FAFF00;
+    text-shadow: 0 0 10px rgba(250,255,0,0.7), 0 0 30px rgba(250,255,0,0.4);
+  }
+  .neon-border {
+    border-color: #FAFF00;
+    box-shadow: 0 0 10px rgba(250,255,0,0.3), inset 0 0 10px rgba(250,255,0,0.05);
+  }
+  .glass-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(250,255,0,0.12);
+    backdrop-filter: blur(12px);
+  }
+  .glass-card:hover {
+    background: rgba(250,255,0,0.04);
+    border-color: rgba(250,255,0,0.35);
+    box-shadow: 0 0 20px rgba(250,255,0,0.15);
+  }
+  .bg-grid {
+    background-image: linear-gradient(rgba(250,255,0,0.03) 1px,transparent 1px),
+                      linear-gradient(90deg,rgba(250,255,0,0.03) 1px,transparent 1px);
+    background-size: 60px 60px;
+  }
+  .skill-bar-fill {
+    background: linear-gradient(90deg, #FAFF00, #C8CC00);
+    box-shadow: 0 0 8px rgba(250,255,0,0.5);
+  }
+  .section-label {
+    @apply font-mono text-sm font-semibold tracking-[0.2em] uppercase;
+    color: #FAFF00;
+  }
+}
