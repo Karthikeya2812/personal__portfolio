@@ -3,6 +3,20 @@ import { useInView } from '../hooks/useInView'
 
 const experiences = [
   {
+    id: 'yugayatra',
+    role: 'Software Engineer Intern',
+    org: 'YugaYatra Retail (OPC) Private Ltd',
+    period: 'Apr 2026 – Present',
+    type: 'Internship (Remote)',
+    highlights: [
+      'Assisting in developing and optimizing web applications and services.',
+      'Collaborating with developers to design and implement robust, user-friendly features.',
+      'Writing clean, maintainable code and participating in code reviews to ensure high-quality standards.',
+      'Debugging issues and participating in team sprints to deliver projects on time.',
+    ],
+    tags: ['Software Engineering', 'Web Development', 'React', 'Problem Solving'],
+  },
+  {
     id: 'outlier',
     role: 'AI Model Evaluation Specialist',
     org: 'Outlier (Freelance)',
